@@ -12,4 +12,6 @@ public interface FuncionarioService {
 
 	public List<FuncionarioDTO> deleteFuncionario(FuncionarioDTO funcionario) throws Exception;
 
+	public List<FuncionarioDTO> getByParam(FuncionarioDTO funcionario) throws Exception;
+
 }

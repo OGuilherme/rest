@@ -32,5 +32,11 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 		List<FuncionarioDTO> funcionarios = utils.deleteListaFuncionarios(funcionario);
 		return funcionarios;
 	}
+
+	@Override
+	public List<FuncionarioDTO> getByParam(FuncionarioDTO funcionario) throws Exception {
+		List<FuncionarioDTO> funcionarios = utils.getFuncionariosByParam(funcionario);
+		return funcionarios;
+	}
 	
 }
