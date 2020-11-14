@@ -18,7 +18,7 @@ public class FuncionarioController {
 	@Autowired
 	private FuncionarioService service;
 
-	@GetMapping(value="getAll", produces="application/json", consumes="application/json")
+	@GetMapping(value="getAll", produces="application/json")
 	public List<FuncionarioDTO> consultaFuncionario() throws Exception {
 		try {
 			List<FuncionarioDTO> funcionarios = service.getAll();
@@ -28,7 +28,7 @@ public class FuncionarioController {
 		}
 	}
 	
-	@GetMapping(value="getByParam",produces="application/json", consumes="application/json")
+	@GetMapping(value="getByParam",produces="application/json")
 	public List<FuncionarioDTO> consultaFuncionario(@RequestParam FuncionarioDTO funcionario) throws Exception {
 		try {
 			List<FuncionarioDTO> funcionarios = service.getByParam(funcionario);
@@ -38,7 +38,7 @@ public class FuncionarioController {
 		}
 	}
 
-	@PostMapping(value="save", produces="application/json", consumes="application/json")
+	@PostMapping(value="save", produces="application/json")
 	public List<FuncionarioDTO> incluirAlterarFuncionario(@RequestParam FuncionarioDTO funcionario) throws Exception {
 		try {
 			List<FuncionarioDTO> funcionarios = service.setFuncionario(funcionario);
@@ -48,7 +48,7 @@ public class FuncionarioController {
 		}
 	}
 
-	@DeleteMapping(value="delete", produces="application/json", consumes="application/json")
+	@DeleteMapping(value="delete", produces="application/json")
 	public List<FuncionarioDTO> excluirFuncionario(@RequestParam FuncionarioDTO funcionario) throws Exception {
 		try {
 			List<FuncionarioDTO> funcionarios = service.deleteFuncionario(funcionario);
